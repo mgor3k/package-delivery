@@ -5,11 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "PackageDeliveryKit",
+    platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "PackageDeliveryKit",
             targets: ["PackageDeliveryKit"]),
+        .library(name: "PackageDeliveryUI", targets: ["PackageDeliveryUI"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,5 +26,6 @@ let package = Package(
         .testTarget(
             name: "PackageDeliveryKitTests",
             dependencies: ["PackageDeliveryKit"]),
+        .target(name: "PackageDeliveryUI")
     ]
 )

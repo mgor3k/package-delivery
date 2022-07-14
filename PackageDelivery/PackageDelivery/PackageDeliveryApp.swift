@@ -1,17 +1,19 @@
-//
-//  PackageDeliveryApp.swift
-//  PackageDelivery
-//
-//  Created by Maciej Gorecki on 14/07/2022.
-//
-
 import SwiftUI
+import PackageDeliveryKit
 
 @main
 struct PackageDeliveryApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      NavigationView {
+        HomeView()
+          .toolbar(.hidden)
+      }
+      .environmentObject(
+        DeliveryStore(
+          service: .live
+        )
+      )
     }
+  }
 }

@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B9E3C0B4288070DC00BFECC8 /* PackageDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0B3288070DC00BFECC8 /* PackageDeliveryApp.swift */; };
-		B9E3C0B6288070DC00BFECC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0B5288070DC00BFECC8 /* ContentView.swift */; };
+		B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0B5288070DC00BFECC8 /* HomeView.swift */; };
 		B9E3C0B8288070DC00BFECC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E3C0B7288070DC00BFECC8 /* Assets.xcassets */; };
 		B9E3C0BB288070DC00BFECC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E3C0BA288070DC00BFECC8 /* Preview Assets.xcassets */; };
+		B9E3C0C4288073E600BFECC8 /* TrackedDeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0C3288073E600BFECC8 /* TrackedDeliveryView.swift */; };
+		B9E3C0C82880804400BFECC8 /* ServiceTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0C72880804400BFECC8 /* ServiceTileView.swift */; };
+		B9E3C0CB288080CD00BFECC8 /* PackageDeliveryKit in Frameworks */ = {isa = PBXBuildFile; productRef = B9E3C0CA288080CD00BFECC8 /* PackageDeliveryKit */; };
+		B9E3C0CD288080CF00BFECC8 /* PackageDeliveryUI in Frameworks */ = {isa = PBXBuildFile; productRef = B9E3C0CC288080CF00BFECC8 /* PackageDeliveryUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B9E3C0B0288070DC00BFECC8 /* PackageDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackageDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E3C0B3288070DC00BFECC8 /* PackageDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDeliveryApp.swift; sourceTree = "<group>"; };
-		B9E3C0B5288070DC00BFECC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9E3C0B5288070DC00BFECC8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B9E3C0B7288070DC00BFECC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9E3C0BA288070DC00BFECC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9E3C0C1288070ED00BFECC8 /* PackageDeliveryKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PackageDeliveryKit; path = ../PackageDeliveryKit; sourceTree = "<group>"; };
+		B9E3C0C3288073E600BFECC8 /* TrackedDeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedDeliveryView.swift; sourceTree = "<group>"; };
+		B9E3C0C72880804400BFECC8 /* ServiceTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E3C0CB288080CD00BFECC8 /* PackageDeliveryKit in Frameworks */,
+				B9E3C0CD288080CF00BFECC8 /* PackageDeliveryUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +47,7 @@
 				B9E3C0C1288070ED00BFECC8 /* PackageDeliveryKit */,
 				B9E3C0B2288070DC00BFECC8 /* PackageDelivery */,
 				B9E3C0B1288070DC00BFECC8 /* Products */,
+				B9E3C0C9288080CD00BFECC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E3C0B3288070DC00BFECC8 /* PackageDeliveryApp.swift */,
-				B9E3C0B5288070DC00BFECC8 /* ContentView.swift */,
+				B9E3C0C2288072D500BFECC8 /* Home */,
 				B9E3C0B7288070DC00BFECC8 /* Assets.xcassets */,
 				B9E3C0B9288070DC00BFECC8 /* Preview Content */,
 			);
@@ -67,6 +76,23 @@
 				B9E3C0BA288070DC00BFECC8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9E3C0C2288072D500BFECC8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9E3C0B5288070DC00BFECC8 /* HomeView.swift */,
+				B9E3C0C72880804400BFECC8 /* ServiceTileView.swift */,
+				B9E3C0C3288073E600BFECC8 /* TrackedDeliveryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B9E3C0C9288080CD00BFECC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +111,10 @@
 			dependencies = (
 			);
 			name = PackageDelivery;
+			packageProductDependencies = (
+				B9E3C0CA288080CD00BFECC8 /* PackageDeliveryKit */,
+				B9E3C0CC288080CF00BFECC8 /* PackageDeliveryUI */,
+			);
 			productName = PackageDelivery;
 			productReference = B9E3C0B0288070DC00BFECC8 /* PackageDelivery.app */;
 			productType = "com.apple.product-type.application";
@@ -139,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E3C0B6288070DC00BFECC8 /* ContentView.swift in Sources */,
+				B9E3C0C4288073E600BFECC8 /* TrackedDeliveryView.swift in Sources */,
+				B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */,
+				B9E3C0C82880804400BFECC8 /* ServiceTileView.swift in Sources */,
 				B9E3C0B4288070DC00BFECC8 /* PackageDeliveryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +373,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9E3C0CA288080CD00BFECC8 /* PackageDeliveryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PackageDeliveryKit;
+		};
+		B9E3C0CC288080CF00BFECC8 /* PackageDeliveryUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PackageDeliveryUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9E3C0A8288070DC00BFECC8 /* Project object */;
 }
