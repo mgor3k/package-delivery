@@ -11,7 +11,8 @@ let package = Package(
         .library(
             name: "PackageDeliveryKit",
             targets: ["PackageDeliveryKit"]),
-        .library(name: "PackageDeliveryUI", targets: ["PackageDeliveryUI"])
+        .library(name: "PackageDeliveryUI", targets: ["PackageDeliveryUI"]),
+        .library(name: "Utilities", targets: ["Utilities"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,10 +23,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "PackageDeliveryKit",
-            dependencies: []),
+            dependencies: [.target(name: "Utilities")]),
         .testTarget(
             name: "PackageDeliveryKitTests",
             dependencies: ["PackageDeliveryKit"]),
-        .target(name: "PackageDeliveryUI")
+        .target(name: "PackageDeliveryUI"),
+        .target(name: "Utilities")
     ]
 )

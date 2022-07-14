@@ -36,17 +36,15 @@ struct HomeView: View {
           if let delivery = store.pendingDelivery {
             TrackedDeliveryView(delivery: delivery)
               .padding(.horizontal, 24)
+              .transition(.slide)
           }
           
           Text("Services")
           
-          LazyHStack {
-            
-          }
-          
           
           Spacer()
         }
+        .animation(.default, value: store.pendingDelivery)
         .navigationDestination(for: Route.self) { route in
           Text("haha")
         }

@@ -8,7 +8,8 @@ public extension DeliveryService {
   static var live: Self {
     .init(
       getDeliveries: {
-        [.init(id: "1", location: "7a, Boston", deliveryDate: .now + 1)]
+        try await Task.sleep(nanoseconds: NSEC_PER_SEC)
+        return [.init(id: "1", location: "7a, Boston", deliveryDate: .now + 1)]
       }
     )
   }

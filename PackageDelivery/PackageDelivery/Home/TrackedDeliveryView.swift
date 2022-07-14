@@ -28,11 +28,6 @@ struct TrackedDeliveryView: View {
       .padding()
       
       Spacer()
-      
-      Image("delivery-truck")
-        .resizable()
-        .scaledToFit()
-        .frame(height: 100)
     }
     .padding()
     .background(
@@ -40,6 +35,11 @@ struct TrackedDeliveryView: View {
         .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
         .shadow(color: .black.opacity(0.05),radius: 50)
     )
+    .overlay(alignment: .trailing) {
+      LottieView(name: "truck")
+        .scaledToFit()
+        .frame(width: 200, height: 300)
+    }
     .background(
       RoundedRectangle(cornerRadius: 32, style: .continuous)
         .stroke(.gray.opacity(0.2), lineWidth: 2)
@@ -48,6 +48,21 @@ struct TrackedDeliveryView: View {
 }
 
 extension TrackedDeliveryView {
+  @ViewBuilder
+  func content(delivery: Delivery) -> some View {
+    section(
+      imageName: "map",
+      title: "Location",
+      value: delivery.location
+    )
+    
+    section(
+      imageName: "clock",
+      title: "Est. Time",
+      value: Self.formatter.string(from: delivery.deliveryDate)
+    )
+  }
+  
   func section(
     imageName: String,
     title: String,
@@ -69,8 +84,6 @@ extension TrackedDeliveryView {
 
 struct TrackedDeliveryView_Previews: PreviewProvider {
   static var previews: some View {
-    TrackedDeliveryView(
-      delivery: .preview()
-    )
+    TrackedDeliveryView(delivery: .preview())
   }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Delivery {
+public struct Delivery: Equatable {
   let id: String
   public let location: String
   public let deliveryDate: Date
