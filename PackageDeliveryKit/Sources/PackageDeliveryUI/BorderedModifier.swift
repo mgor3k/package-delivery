@@ -17,7 +17,8 @@ public struct BorderedModifier: ViewModifier {
   
   public func body(content: Content) -> some View {
     content
-      .padding()
+      .padding(.horizontal)
+      .padding(.vertical, 6)
       .background(
         Color.white
           .clipShape(

@@ -46,6 +46,10 @@ struct HomeView: View {
           ServiceList()
             .frame(height: 160)
           
+          Text("Card")
+            .font(.headline)
+            .padding(.horizontal, 24)
+          
           Spacer()
         }
         .animation(.default, value: store.pendingDelivery)
