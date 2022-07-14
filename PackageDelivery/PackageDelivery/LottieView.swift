@@ -15,6 +15,7 @@ struct LottieView: UIViewRepresentable {
     animationView.contentMode = .scaleAspectFit
     animationView.loopMode = loopMode
     animationView.transform = .init(scaleX: -1, y: 1)
+    animationView.backgroundBehavior = .pauseAndRestore
     animationView.play()
     
     animationView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,41 +30,4 @@ struct LottieView: UIViewRepresentable {
   }
   
   func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {}
-  
-}
-
-extension LottieView {
-  func makeCoordinator() -> Coordinator {
-    Coordinator(self)
-  }
-  
-  final class Coordinator {
-    var parent: LottieView
-    var subscriptions: Set<AnyCancellable> = []
-    
-    init(_ parent: LottieView) {
-      self.parent = parent
-      setupBindings()
-    }
-  }
-}
-
-extension LottieView.Coordinator {
-  func setupBindings() {
-    NotificationCenter
-      .default
-      .publisher(for: UIApplication.willResignActiveNotification)
-      .sink { [weak self] _ in
-        self?.parent.animationView.pause()
-      }
-      .store(in: &subscriptions)
-    
-    NotificationCenter
-      .default
-      .publisher(for: UIApplication.willEnterForegroundNotification)
-      .sink { [weak self] _ in
-        self?.parent.animationView.play()
-      }
-      .store(in: &subscriptions)
-  }
 }
