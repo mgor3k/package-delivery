@@ -30,22 +30,13 @@ struct TrackedDeliveryView: View {
       
       Spacer()
     }
-    .padding()
-    .background(
-      Color.white
-        .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
-        .shadow(color: .black.opacity(0.05),radius: 50)
-    )
+    .modifier(BorderedModifier())
     .overlay(alignment: .trailing) {
       LottieView(name: "truck")
         .scaledToFit()
         .frame(width: 200, height: 300)
         .offset(x: 15)
     }
-    .background(
-      RoundedRectangle(cornerRadius: 32, style: .continuous)
-        .stroke(.gray.opacity(0.2), lineWidth: 2)
-    )
   }
 }
 

@@ -30,7 +30,6 @@ public struct TitledIcon: View {
   }
 }
 
-#if DEBUG
 struct TitledIcon_Previews: PreviewProvider {
   static var previews: some View {
     TitledIcon(
@@ -40,4 +39,3 @@ struct TitledIcon_Previews: PreviewProvider {
     )
   }
 }
-#endif

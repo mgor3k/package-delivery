@@ -1,8 +1,13 @@
 import SwiftUI
+import PackageDeliveryUI
 
 struct ServiceTileView: View {
   var body: some View {
-    Text("Hello, World!")
+    VStack {
+      Image(systemName: "shippingbox.fill")
+        .foregroundColor(.yellow)
+    }
+    .modifier(BorderedModifier())
   }
 }
 

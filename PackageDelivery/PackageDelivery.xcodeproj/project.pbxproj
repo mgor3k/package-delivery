@@ -18,7 +18,6 @@
 		B9E3C0D028808A1100BFECC8 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B9E3C0CF28808A1100BFECC8 /* Lottie */; };
 		B9E3C0D228808A4100BFECC8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0D128808A4100BFECC8 /* LottieView.swift */; };
 		B9E3C0D828808D8400BFECC8 /* truck.json in Resources */ = {isa = PBXBuildFile; fileRef = B9E3C0D728808D8400BFECC8 /* truck.json */; };
-		B9E3C0DB28808FF200BFECC8 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0DA28808FF200BFECC8 /* ServiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		B9E3C0C72880804400BFECC8 /* ServiceTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTileView.swift; sourceTree = "<group>"; };
 		B9E3C0D128808A4100BFECC8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		B9E3C0D728808D8400BFECC8 /* truck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = truck.json; sourceTree = "<group>"; };
-		B9E3C0DA28808FF200BFECC8 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 			children = (
 				B9E3C0B3288070DC00BFECC8 /* PackageDeliveryApp.swift */,
 				B9E3C0D128808A4100BFECC8 /* LottieView.swift */,
-				B9E3C0D928808FE900BFECC8 /* Services */,
 				B9E3C0D328808A8200BFECC8 /* Resources */,
 				B9E3C0C2288072D500BFECC8 /* Home */,
 				B9E3C0B7288070DC00BFECC8 /* Assets.xcassets */,
@@ -120,14 +117,6 @@
 				B9E3C0D728808D8400BFECC8 /* truck.json */,
 			);
 			path = Animations;
-			sourceTree = "<group>";
-		};
-		B9E3C0D928808FE900BFECC8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B9E3C0DA28808FF200BFECC8 /* ServiceView.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +202,6 @@
 				B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */,
 				B9E3C0D228808A4100BFECC8 /* LottieView.swift in Sources */,
 				B9E3C0C82880804400BFECC8 /* ServiceTileView.swift in Sources */,
-				B9E3C0DB28808FF200BFECC8 /* ServiceView.swift in Sources */,
 				B9E3C0B4288070DC00BFECC8 /* PackageDeliveryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
