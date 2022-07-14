@@ -40,7 +40,8 @@ struct HomeView: View {
           }
           
           Text("Services")
-          
+            .font(.headline)
+            .padding(.horizontal, 24)
           
           Spacer()
         }

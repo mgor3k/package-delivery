@@ -39,6 +39,7 @@ struct TrackedDeliveryView: View {
       LottieView(name: "truck")
         .scaledToFit()
         .frame(width: 200, height: 300)
+        .offset(x: 15)
     }
     .background(
       RoundedRectangle(cornerRadius: 32, style: .continuous)
