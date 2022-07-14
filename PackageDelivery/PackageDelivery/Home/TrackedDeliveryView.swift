@@ -1,5 +1,6 @@
 import SwiftUI
 import PackageDeliveryKit
+import PackageDeliveryUI
 
 struct TrackedDeliveryView: View {
   let delivery: Delivery
@@ -13,16 +14,16 @@ struct TrackedDeliveryView: View {
   var body: some View {
     HStack {
       VStack(alignment: .leading, spacing: 24) {
-        section(
-          imageName: "map",
+        TitledIcon(
+          systemName: "map",
           title: "Location",
-          value: delivery.location
+          description: delivery.location
         )
         
-        section(
-          imageName: "clock",
+        TitledIcon(
+          systemName: "clock",
           title: "Est. Time",
-          value: Self.formatter.string(from: delivery.deliveryDate)
+          description: Self.formatter.string(from: delivery.deliveryDate)
         )
       }
       .padding()
@@ -45,41 +46,6 @@ struct TrackedDeliveryView: View {
       RoundedRectangle(cornerRadius: 32, style: .continuous)
         .stroke(.gray.opacity(0.2), lineWidth: 2)
     )
-  }
-}
-
-extension TrackedDeliveryView {
-  @ViewBuilder
-  func content(delivery: Delivery) -> some View {
-    section(
-      imageName: "map",
-      title: "Location",
-      value: delivery.location
-    )
-    
-    section(
-      imageName: "clock",
-      title: "Est. Time",
-      value: Self.formatter.string(from: delivery.deliveryDate)
-    )
-  }
-  
-  func section(
-    imageName: String,
-    title: String,
-    value: String
-  ) -> some View {
-    HStack(spacing: 14) {
-      Image(systemName: imageName)
-        .foregroundColor(.gray)
-        .frame(width: 12)
-      VStack(alignment: .leading, spacing: 4) {
-        Text(title)
-          .foregroundColor(.gray)
-        Text(value)
-          .bold()
-      }
-    }
   }
 }
 
