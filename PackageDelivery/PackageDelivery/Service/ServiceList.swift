@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ServiceList: View {
-  var services: [ServiceItem] = ServiceItem.allCases
+  var services = ServiceItem.allCases
   let highlightedItem: ServiceItem = .myPackage
   
   var body: some View {

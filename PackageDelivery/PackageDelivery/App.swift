@@ -5,15 +5,12 @@ import PackageDeliveryKit
 struct PackageDeliveryApp: App {
   var body: some Scene {
     WindowGroup {
-      NavigationView {
-        HomeView()
-          .toolbar(.hidden)
-      }
-      .environmentObject(
-        DeliveryStore(
-          service: .live()
+      MainView()
+        .environmentObject(
+          DeliveryStore(
+            service: .live()
+          )
         )
-      )
     }
   }
 }

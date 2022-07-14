@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B98C2B092880960900635CBB /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B082880960900635CBB /* ServiceItem.swift */; };
 		B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0A288097EC00635CBB /* ServiceList.swift */; };
+		B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0E2880A0D200635CBB /* TabMenu.swift */; };
+		B98C2B122880A0FE00635CBB /* TabMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B112880A0FE00635CBB /* TabMenuItem.swift */; };
+		B98C2B162880A40900635CBB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B152880A40900635CBB /* MainView.swift */; };
+		B98C2B182880A53000635CBB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B172880A53000635CBB /* Route.swift */; };
 		B9E3C0B4288070DC00BFECC8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0B3288070DC00BFECC8 /* App.swift */; };
 		B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E3C0B5288070DC00BFECC8 /* HomeView.swift */; };
 		B9E3C0B8288070DC00BFECC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E3C0B7288070DC00BFECC8 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 /* Begin PBXFileReference section */
 		B98C2B082880960900635CBB /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		B98C2B0A288097EC00635CBB /* ServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceList.swift; sourceTree = "<group>"; };
+		B98C2B0E2880A0D200635CBB /* TabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenu.swift; sourceTree = "<group>"; };
+		B98C2B112880A0FE00635CBB /* TabMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuItem.swift; sourceTree = "<group>"; };
+		B98C2B152880A40900635CBB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B98C2B172880A53000635CBB /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		B9E3C0B0288070DC00BFECC8 /* PackageDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackageDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E3C0B3288070DC00BFECC8 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B9E3C0B5288070DC00BFECC8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,6 +72,15 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		B98C2B102880A0F000635CBB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B98C2B0E2880A0D200635CBB /* TabMenu.swift */,
+				B98C2B112880A0FE00635CBB /* TabMenuItem.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		B9E3C0A7288070DC00BFECC8 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				B9E3C0B3288070DC00BFECC8 /* App.swift */,
+				B98C2B152880A40900635CBB /* MainView.swift */,
+				B98C2B172880A53000635CBB /* Route.swift */,
+				B98C2B102880A0F000635CBB /* Menu */,
 				B9E3C0D328808A8200BFECC8 /* Resources */,
 				B98C2B0C28809EEB00635CBB /* Card */,
 				B98C2B07288095FA00635CBB /* Service */,
@@ -214,11 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98C2B092880960900635CBB /* ServiceItem.swift in Sources */,
+				B98C2B162880A40900635CBB /* MainView.swift in Sources */,
 				B9E3C0C4288073E600BFECC8 /* TrackedDeliveryView.swift in Sources */,
+				B98C2B182880A53000635CBB /* Route.swift in Sources */,
 				B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */,
 				B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */,
+				B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */,
 				B9E3C0C82880804400BFECC8 /* ServiceTileView.swift in Sources */,
 				B9E3C0B4288070DC00BFECC8 /* App.swift in Sources */,
+				B98C2B122880A0FE00635CBB /* TabMenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
