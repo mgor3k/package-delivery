@@ -11,7 +11,7 @@ struct PackageDeliveryApp: App {
       }
       .environmentObject(
         DeliveryStore(
-          service: .live
+          service: .live()
         )
       )
     }
