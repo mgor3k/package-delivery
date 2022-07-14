@@ -1,7 +1,19 @@
 import SwiftUI
 
 public struct BorderedModifier: ViewModifier {
-  public init() {}
+  let shadowOpacity: CGFloat
+  let shadowRadius: CGFloat
+  let shadowOffset: CGSize
+  
+  public init(
+    shadowOpacity: CGFloat = 0.05,
+    shadowRadius: CGFloat = 50,
+    shadowOffset: CGSize = .zero
+  ) {
+    self.shadowOpacity = shadowOpacity
+    self.shadowRadius = shadowRadius
+    self.shadowOffset = shadowOffset
+  }
   
   public func body(content: Content) -> some View {
     content
@@ -11,7 +23,12 @@ public struct BorderedModifier: ViewModifier {
           .clipShape(
             RoundedRectangle(cornerRadius: 32, style: .continuous)
           )
-          .shadow(color: .black.opacity(0.05),radius: 50)
+          .shadow(
+            color: .black.opacity(shadowOpacity),
+            radius: shadowRadius,
+            x: shadowOffset.width,
+            y: shadowOffset.height
+          )
       )
       .background(
         RoundedRectangle(cornerRadius: 32, style: .continuous)

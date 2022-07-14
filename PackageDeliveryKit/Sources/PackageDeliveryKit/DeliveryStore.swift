@@ -25,3 +25,11 @@ private extension DeliveryStore {
     }
   }
 }
+
+#if DEBUG
+public extension DeliveryStore {
+  static func preview(deliveries: [Delivery] = [.preview()]) -> DeliveryStore {
+    .init(service: .preview(deliveries: deliveries))
+  }
+}
+#endif

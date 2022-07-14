@@ -8,7 +8,7 @@ struct HomeView: View {
   var body: some View {
     VStack {
       NavigationStack(path: $navigationPath) {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 18) {
           HStack {
             Spacer()
             
@@ -29,7 +29,7 @@ struct HomeView: View {
           }
           
           Text("Hello!\nTrack your parcel!")
-            .font(.largeTitle)
+            .font(.title)
             .bold()
             .padding(.horizontal, 24)
           
@@ -42,6 +42,9 @@ struct HomeView: View {
           Text("Services")
             .font(.headline)
             .padding(.horizontal, 24)
+          
+          ServiceList()
+            .frame(height: 160)
           
           Spacer()
         }
@@ -63,5 +66,6 @@ extension HomeView {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     HomeView()
+      .environmentObject(DeliveryStore.preview())
   }
 }

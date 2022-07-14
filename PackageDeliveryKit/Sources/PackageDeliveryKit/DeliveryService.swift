@@ -14,3 +14,13 @@ public extension DeliveryService {
     )
   }
 }
+
+#if DEBUG
+extension DeliveryService {
+  static func preview(deliveries: [Delivery] = []) -> Self {
+    .init(getDeliveries: {
+      deliveries
+    })
+  }
+}
+#endif
