@@ -25,6 +25,7 @@ public struct TitledIcon: View {
           .foregroundColor(.gray)
         Text(description)
           .bold()
+          .foregroundColor(.black)
       }
     }
   }

@@ -15,7 +15,12 @@ struct MainView: View {
         TabMenu()
       }
       .navigationDestination(for: Route.self) { route in
-        Text("haha")
+        switch route {
+        case .map:
+          Text("Map")
+        case let .details(delivery):
+          DeliveryView(delivery: delivery)
+        }
       }
     }
   }

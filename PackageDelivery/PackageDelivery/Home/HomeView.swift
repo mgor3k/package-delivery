@@ -33,9 +33,11 @@ struct HomeView: View {
           .padding(.horizontal, 24)
         
         if let delivery = store.pendingDelivery {
-          TrackedDeliveryView(delivery: delivery)
-            .padding(.horizontal, 24)
-            .transition(.slide)
+          Button(action: { navigationPath.append(Route.details(delivery)) }) {
+            TrackedDeliveryView(delivery: delivery)
+              .padding(.horizontal, 24)
+          }
+          .transition(.slide)
         }
         
         Text("Services")
