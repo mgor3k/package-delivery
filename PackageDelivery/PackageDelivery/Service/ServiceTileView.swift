@@ -16,7 +16,7 @@ struct ServiceTileView: View {
     .padding(.vertical)
     .padding(.horizontal, 6)
     .modifier(BorderedModifier(
-      shadowOpacity: item == highlightedItem ? 0.1 : 0,
+      shadowOpacity: item == highlightedItem ? 0.05 : 0,
       shadowRadius: 15,
       shadowOffset: .init(width: 10, height: 10)
     ))
