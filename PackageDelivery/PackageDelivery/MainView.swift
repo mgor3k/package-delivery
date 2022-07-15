@@ -17,7 +17,7 @@ struct MainView: View {
       .navigationDestination(for: Route.self) { route in
         switch route {
         case .map:
-          Text("Map")
+          MapView()
         case let .details(delivery):
           DeliveryView(delivery: delivery)
         }
