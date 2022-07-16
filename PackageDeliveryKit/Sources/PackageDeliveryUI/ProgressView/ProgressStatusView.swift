@@ -23,7 +23,7 @@ public struct ProgressStatusView: View {
         Text("Sent")
       }
       
-      ProgressLineView()
+      ProgressLineView(isDashed: true)
       
       VStack {
         ProgressStatusIndicator(status: .incomplete)
