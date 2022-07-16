@@ -1,5 +1,6 @@
 import SwiftUI
 import PackageDeliveryKit
+import PackageDeliveryUI
 
 struct DeliveryView: View {
   @Environment(\.dismiss) var dismiss
@@ -7,7 +8,7 @@ struct DeliveryView: View {
   
   var body: some View {
     // TODO: Move to NavigationBar
-    VStack {
+    VStack(spacing: 24) {
       VStack(alignment: .leading, spacing: 24) {
         HStack {
           Button(action: { dismiss() }) {
@@ -25,7 +26,8 @@ struct DeliveryView: View {
       .padding(24)
       .padding(.horizontal, 12)
       
-      Text("hasdh")
+      ProgressStatusView()
+        .padding(.horizontal, 32)
     }
     .frame(maxHeight: .infinity, alignment: .top)
     .navigationBarBackButtonHidden(true)

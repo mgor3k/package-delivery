@@ -1,8 +1,9 @@
 import SwiftUI
 
-struct ProgressStatusView: View {
+public struct ProgressStatusView: View {
+  public init() {}
 
-  var body: some View {
+  public var body: some View {
     HStack(alignment: .myAlignment) {
       VStack {
         ProgressStatusIndicator(status: .done)
