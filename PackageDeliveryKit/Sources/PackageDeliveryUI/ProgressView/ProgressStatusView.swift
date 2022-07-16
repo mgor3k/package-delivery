@@ -42,6 +42,9 @@ public struct ProgressStatusView: View {
           $0[.myAlignment]
         }
       Text(title)
+        .font(.caption)
+        .bold()
+        .opacity(status == .incomplete ? 0.5 : 1)
     }
   }
 }
