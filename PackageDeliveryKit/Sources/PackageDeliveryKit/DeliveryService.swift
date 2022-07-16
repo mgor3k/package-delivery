@@ -9,7 +9,7 @@ public extension DeliveryService {
     .init(
       getDeliveries: {
         try await Task.sleep(nanoseconds: NSEC_PER_SEC * delay)
-        return [.init(id: "1", location: "7a, Boston", deliveryDate: .now + 1)]
+        return [.init(id: "1", location: "7a, Boston", deliveryDate: .now + 1, status: .sent)]
       }
     )
   }

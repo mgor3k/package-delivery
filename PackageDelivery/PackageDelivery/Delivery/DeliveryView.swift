@@ -2,10 +2,33 @@ import SwiftUI
 import PackageDeliveryKit
 
 struct DeliveryView: View {
+  @Environment(\.dismiss) var dismiss
   let delivery: Delivery
   
   var body: some View {
-    Text("Hello, World! \(delivery.location)")
+    // TODO: Move to NavigationBar
+    VStack {
+      VStack(alignment: .leading, spacing: 24) {
+        HStack {
+          Button(action: { dismiss() }) {
+            Image(systemName: "chevron.backward")
+              .bold()
+              .foregroundColor(.black)
+          }
+          Spacer()
+        }
+        
+        Text("Delivery\nDetails")
+          .font(.title)
+          .bold()
+      }
+      .padding(24)
+      .padding(.horizontal, 12)
+      
+      Text("hasdh")
+    }
+    .frame(maxHeight: .infinity, alignment: .top)
+    .navigationBarBackButtonHidden(true)
   }
 }
 
