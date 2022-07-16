@@ -26,7 +26,7 @@ struct DeliveryView: View {
       .padding(24)
       .padding(.horizontal, 12)
       
-      ProgressStatusView()
+      ProgressStatusView(deliveryStatus: delivery.status)
         .padding(.horizontal, 32)
     }
     .frame(maxHeight: .infinity, alignment: .top)

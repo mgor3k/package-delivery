@@ -35,7 +35,8 @@ let package = Package(
     .target(
       name: "PackageDeliveryUI",
       dependencies: [
-        .product(name: "Lottie", package: "lottie-ios")
+        .product(name: "Lottie", package: "lottie-ios"),
+        .target(name: "PackageDeliveryKit")
       ]),
     .target(name: "Utilities")
   ]
