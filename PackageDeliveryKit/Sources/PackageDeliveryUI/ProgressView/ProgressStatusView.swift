@@ -10,34 +10,45 @@ public struct ProgressStatusView: View {
 
   public var body: some View {
     HStack(alignment: .myAlignment) {
-      VStack {
-        ProgressStatusIndicator(status: .done)
-          .alignmentGuide(.myAlignment) {
-            $0[.myAlignment]
-          }
-        Text("Packed")
-      }
+      titledProgress(
+        "Packed",
+        withStatus: deliveryStatus.isPacked ? .done : .pending
+      )
       
-      ProgressLineView()
+      ProgressLineView(isDashed: deliveryStatus == .packing)
       
-      VStack {
-        ProgressStatusIndicator(status: .pending)
-          .alignmentGuide(.myAlignment) {
-            $0[.myAlignment]
-          }
-        Text("Sent")
-      }
+      titledProgress(
+        "Sent",
+        withStatus: deliveryStatus.isPacked ? (deliveryStatus == .completed ? .done :.pending) : .incomplete
+      )
       
-      ProgressLineView(isDashed: true)
+      ProgressLineView(isDashed: deliveryStatus != .completed)
       
-      VStack {
-        ProgressStatusIndicator(status: .incomplete)
-          .alignmentGuide(.myAlignment) {
-            $0[.myAlignment]
-          }
-        Text("Until")
-      }
+      titledProgress(
+        "Until",
+        withStatus: deliveryStatus == .completed ? .pending : .incomplete
+      )
     }
+  }
+  
+  @ViewBuilder
+  func titledProgress(
+    _ title: String,
+    withStatus status: ProgressStatusIndicator.Status
+  ) -> some View {
+    VStack {
+      ProgressStatusIndicator(status: status)
+        .alignmentGuide(.myAlignment) {
+          $0[.myAlignment]
+        }
+      Text(title)
+    }
+  }
+}
+
+private extension Delivery.Status {
+  var isPacked: Bool {
+    [.sent, .completed].contains(self)
   }
 }
 
@@ -53,7 +64,11 @@ extension VerticalAlignment {
 
 struct ProgressStatusView_Previews: PreviewProvider {
   static var previews: some View {
-    ProgressStatusView(deliveryStatus: .sent)
+    VStack(spacing: 32) {
+      ProgressStatusView(deliveryStatus: .packing)
+      ProgressStatusView(deliveryStatus: .sent)
+      ProgressStatusView(deliveryStatus: .completed)
+    }
       .padding()
   }
 }
