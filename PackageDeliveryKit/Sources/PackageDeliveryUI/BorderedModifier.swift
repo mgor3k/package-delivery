@@ -33,7 +33,7 @@ public struct BorderedModifier: ViewModifier {
       )
       .background(
         RoundedRectangle(cornerRadius: 32, style: .continuous)
-          .stroke(.gray.opacity(0.2), lineWidth: 2)
+          .stroke(.gray.opacity(0.15), lineWidth: 2)
       )
   }
 }
