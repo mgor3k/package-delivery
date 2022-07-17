@@ -9,11 +9,10 @@ public final class DeliveryStore: ObservableObject {
     service: DeliveryService
   ) {
     self.service = service
-    fetchPendingDelivery()
   }
 }
 
-private extension DeliveryStore {
+public extension DeliveryStore {
   func fetchPendingDelivery() {
     Task { @MainActor in
       do {

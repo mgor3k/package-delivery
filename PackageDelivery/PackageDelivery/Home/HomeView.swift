@@ -55,6 +55,7 @@ struct HomeView: View {
       }
       .animation(.default, value: store.pendingDelivery)
     }
+    .onAppear(perform: store.fetchPendingDelivery)
   }
 }
 
