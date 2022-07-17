@@ -29,9 +29,19 @@ struct DeliveryView: View {
       ProgressStatusView(deliveryStatus: delivery.status)
         .padding(.horizontal, 32)
       
-      MapView()
-        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .padding()
+      DeliveryMapView(mode: .route(
+        start: .init(
+          latitude: delivery.currentLocation.latitude,
+          longitude: delivery.currentLocation.longitude
+        ),
+        end: .init(
+          latitude: delivery.deliveryLocation.latitude,
+          longitude: delivery.deliveryLocation.longitude
+        ))
+      )
+      .allowsHitTesting(false)
+      .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+      .padding()
     }
     .frame(maxHeight: .infinity, alignment: .top)
     .navigationBarBackButtonHidden(true)

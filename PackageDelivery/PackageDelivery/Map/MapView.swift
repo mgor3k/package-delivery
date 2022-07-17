@@ -3,14 +3,18 @@ import MapKit
 import PackageDeliveryUI
 
 struct MapView: View {
-  @State var region = MKCoordinateRegion(
-    center: .init(latitude: 51.507, longitude: -0.12),
-    span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01)
-  )
+  let mode: DeliveryMapView.Mode
   
   var body: some View {
-    DeliveryMapView(
-      region: $region
+    DeliveryMapView(mode: .route(
+      start: .init(
+        latitude: 50.0647,
+        longitude: 19.9450
+      ),
+      end: .init(
+        latitude: 52.2297,
+        longitude: 21.0122
+      ))
     )
     .allowsHitTesting(false)
   }
@@ -18,6 +22,9 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView()
+    MapView(mode: .region(.init(
+      center: .init(latitude: 30, longitude: 30),
+      span: .init(latitudeDelta: 0.5, longitudeDelta: 0.5)
+    )))
   }
 }
