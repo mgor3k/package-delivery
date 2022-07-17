@@ -21,6 +21,10 @@ public struct DeliveryMapView: UIViewRepresentable {
     case let .region(region):
       map.region = region
     case let .route(start, end):
+      map.region = .init(
+        center: start,
+        span: .init(latitudeDelta: 0.5, longitudeDelta: 0.5)
+      )
       context.coordinator.showRouteOnMap(
         startCoordinate: start,
         destinationCoordinate: end
