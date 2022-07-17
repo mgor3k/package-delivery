@@ -8,8 +8,8 @@ struct MapView: View {
   )
   
   var body: some View {
-    Map(
-      coordinateRegion: $region
+    CustomMapView(
+      region: $region
     )
     .allowsHitTesting(false)
   }
