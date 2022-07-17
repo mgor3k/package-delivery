@@ -28,6 +28,10 @@ struct DeliveryView: View {
       
       ProgressStatusView(deliveryStatus: delivery.status)
         .padding(.horizontal, 32)
+      
+      MapView()
+        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .padding()
     }
     .frame(maxHeight: .infinity, alignment: .top)
     .navigationBarBackButtonHidden(true)
