@@ -11,6 +11,11 @@ struct PackageDeliveryApp: App {
             service: .live()
           )
         )
+        .environmentObject(
+          CardStore(
+            service: .live()
+          )
+        )
     }
   }
 }

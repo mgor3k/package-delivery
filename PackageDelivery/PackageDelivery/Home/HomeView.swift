@@ -51,6 +51,9 @@ struct HomeView: View {
           .font(.headline)
           .padding(.horizontal, 24)
         
+        ActiveCardPreviewView()
+          .padding(.horizontal, 24)
+        
         Spacer()
       }
       .animation(.default, value: store.pendingDelivery)

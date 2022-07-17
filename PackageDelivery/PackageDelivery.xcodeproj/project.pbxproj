@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B9396F86288453F200BC11A8 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F85288453F200BC11A8 /* ContactView.swift */; };
 		B9396F88288454BF00BC11A8 /* ContactAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F87288454BF00BC11A8 /* ContactAvatarView.swift */; };
+		B9396F8A288465AE00BC11A8 /* ActiveCardPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F89288465AE00BC11A8 /* ActiveCardPreviewView.swift */; };
 		B98C2B092880960900635CBB /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B082880960900635CBB /* ServiceItem.swift */; };
 		B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0A288097EC00635CBB /* ServiceList.swift */; };
 		B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0E2880A0D200635CBB /* TabMenu.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		B9396F85288453F200BC11A8 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		B9396F87288454BF00BC11A8 /* ContactAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAvatarView.swift; sourceTree = "<group>"; };
+		B9396F89288465AE00BC11A8 /* ActiveCardPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCardPreviewView.swift; sourceTree = "<group>"; };
 		B98C2B082880960900635CBB /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		B98C2B0A288097EC00635CBB /* ServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceList.swift; sourceTree = "<group>"; };
 		B98C2B0E2880A0D200635CBB /* TabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenu.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		B98C2B0C28809EEB00635CBB /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				B9396F89288465AE00BC11A8 /* ActiveCardPreviewView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				B9396F86288453F200BC11A8 /* ContactView.swift in Sources */,
 				B98C2B182880A53000635CBB /* Route.swift in Sources */,
 				B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */,
+				B9396F8A288465AE00BC11A8 /* ActiveCardPreviewView.swift in Sources */,
 				B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */,
 				B98C2B1D2881A8C300635CBB /* DeliveryView.swift in Sources */,
 				B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */,
