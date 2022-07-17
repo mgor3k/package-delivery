@@ -46,6 +46,23 @@ struct DeliveryView: View {
       
       ContactView(contact: delivery.driverContact)
         .padding(.horizontal, 32)
+      
+      HStack(spacing: 16) {
+        Button(action: {}) {
+          Image(systemName: "xmark")
+            .foregroundColor(.black)
+            .padding(4)
+            .padding(.vertical, 8)
+            .modifier(BorderedModifier(cornerRadius: 20))
+        }
+        Button(action: {}) {
+          Text("Submit")
+        }
+        .buttonStyle(PrimaryButtonStyle())
+      }
+      .frame(height: 44)
+      .padding(.horizontal, 24)
+      .padding(.vertical, 16)
     }
     .frame(maxHeight: .infinity, alignment: .top)
     .navigationBarBackButtonHidden(true)

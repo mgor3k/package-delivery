@@ -4,15 +4,18 @@ public struct BorderedModifier: ViewModifier {
   let shadowOpacity: CGFloat
   let shadowRadius: CGFloat
   let shadowOffset: CGSize
+  let cornerRadius: CGFloat
   
   public init(
     shadowOpacity: CGFloat = 0.05,
     shadowRadius: CGFloat = 50,
-    shadowOffset: CGSize = .zero
+    shadowOffset: CGSize = .zero,
+    cornerRadius: CGFloat = 32
   ) {
     self.shadowOpacity = shadowOpacity
     self.shadowRadius = shadowRadius
     self.shadowOffset = shadowOffset
+    self.cornerRadius = cornerRadius
   }
   
   public func body(content: Content) -> some View {
@@ -22,7 +25,7 @@ public struct BorderedModifier: ViewModifier {
       .background(
         Color.white
           .clipShape(
-            RoundedRectangle(cornerRadius: 32, style: .continuous)
+            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
           )
           .shadow(
             color: .black.opacity(shadowOpacity),
@@ -32,7 +35,7 @@ public struct BorderedModifier: ViewModifier {
           )
       )
       .background(
-        RoundedRectangle(cornerRadius: 32, style: .continuous)
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
           .stroke(.gray.opacity(0.15), lineWidth: 2)
       )
   }
