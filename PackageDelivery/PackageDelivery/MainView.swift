@@ -2,17 +2,31 @@ import SwiftUI
 import PackageDeliveryKit
 
 struct MainView: View {
+  @State var tab: TabMenuItem = .home
   @State var navigationPath: NavigationPath = .init()
 
   var body: some View {
     NavigationStack(path: $navigationPath) {
       VStack {
-        NavigationView {
-          HomeView(navigationPath: $navigationPath)
-            .toolbar(.hidden)
+        TabView(selection: $tab) {
+          NavigationView {
+            HomeView(navigationPath: $navigationPath)
+              .toolbar(.hidden)
+          }
+          .tag(TabMenuItem.home)
+          
+          Text("Find")
+            .tag(TabMenuItem.find)
+          
+          Text("Map")
+            .tag(TabMenuItem.map)
+          
+          Text("Settings")
+            .tag(TabMenuItem.settings)
         }
+        .toolbar(.hidden, in: .tabBar)
         
-        TabMenu()
+        TabMenu(selectedItem: $tab)
       }
       .navigationDestination(for: Route.self) { route in
         switch route {

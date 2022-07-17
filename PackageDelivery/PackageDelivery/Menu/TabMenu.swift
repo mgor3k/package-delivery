@@ -5,7 +5,7 @@ struct TabMenu: View {
   
   let menuItems = TabMenuItem.allCases
   
-  @State var selectedItem: TabMenuItem = .home
+  @Binding var selectedItem: TabMenuItem
   
   var body: some View {
     HStack {
@@ -44,6 +44,6 @@ struct TabMenu: View {
 
 struct TabMenu_Previews: PreviewProvider {
   static var previews: some View {
-    TabMenu()
+    TabMenu(selectedItem: .constant(.home))
   }
 }
