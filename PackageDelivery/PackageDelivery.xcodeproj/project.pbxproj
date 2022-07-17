@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9396F842884280900BC11A8 /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F832884280900BC11A8 /* CustomMapView.swift */; };
 		B98C2B092880960900635CBB /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B082880960900635CBB /* ServiceItem.swift */; };
 		B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0A288097EC00635CBB /* ServiceList.swift */; };
 		B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0E2880A0D200635CBB /* TabMenu.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B9396F832884280900BC11A8 /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
 		B98C2B082880960900635CBB /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		B98C2B0A288097EC00635CBB /* ServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceList.swift; sourceTree = "<group>"; };
 		B98C2B0E2880A0D200635CBB /* TabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenu.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				B9E3C0B3288070DC00BFECC8 /* App.swift */,
 				B98C2B152880A40900635CBB /* MainView.swift */,
 				B98C2B172880A53000635CBB /* Route.swift */,
-				B9396F832884280900BC11A8 /* CustomMapView.swift */,
 				B98C2B1E2881AA9F00635CBB /* Map */,
 				B98C2B1B2881A8BB00635CBB /* Delivery */,
 				B98C2B102880A0F000635CBB /* Menu */,
@@ -268,7 +265,6 @@
 				B98C2B1D2881A8C300635CBB /* DeliveryView.swift in Sources */,
 				B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */,
 				B9E3C0C82880804400BFECC8 /* ServiceTileView.swift in Sources */,
-				B9396F842884280900BC11A8 /* CustomMapView.swift in Sources */,
 				B9E3C0B4288070DC00BFECC8 /* App.swift in Sources */,
 				B98C2B122880A0FE00635CBB /* TabMenuItem.swift in Sources */,
 			);

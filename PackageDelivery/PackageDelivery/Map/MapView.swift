@@ -1,5 +1,6 @@
 import SwiftUI
 import MapKit
+import PackageDeliveryUI
 
 struct MapView: View {
   @State var region = MKCoordinateRegion(
@@ -8,7 +9,7 @@ struct MapView: View {
   )
   
   var body: some View {
-    CustomMapView(
+    DeliveryMapView(
       region: $region
     )
     .allowsHitTesting(false)

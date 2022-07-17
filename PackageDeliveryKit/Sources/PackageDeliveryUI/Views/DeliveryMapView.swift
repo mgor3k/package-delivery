@@ -1,10 +1,16 @@
 import SwiftUI
 import MapKit
 
-struct CustomMapView: UIViewRepresentable {
+public struct DeliveryMapView: UIViewRepresentable {
   let region: Binding<MKCoordinateRegion>
   
-  func makeUIView(context: Context) -> MKMapView {
+  public init(
+    region: Binding<MKCoordinateRegion>
+  ) {
+    self.region = region
+  }
+  
+  public func makeUIView(context: Context) -> MKMapView {
     let view = MKMapView()
     view.region = region.wrappedValue
     view.pointOfInterestFilter = .excludingAll
@@ -12,12 +18,12 @@ struct CustomMapView: UIViewRepresentable {
     return view
   }
   
-  func updateUIView(_ uiView: MKMapView, context: Context) {}
+  public func updateUIView(_ uiView: MKMapView, context: Context) {}
 }
 
-struct CustomMapView_Previews: PreviewProvider {
+struct DeliveryMapView_Previews: PreviewProvider {
   static var previews: some View {
-    CustomMapView(region: .constant(.init(
+    DeliveryMapView(region: .constant(.init(
       center: .init(latitude: 51.507, longitude: -0.12),
       span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01)
     )))
