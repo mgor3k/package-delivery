@@ -14,9 +14,14 @@ public extension DeliveryService {
             id: "1",
             currentLocation: .init(latitude: 50.061171, longitude: 19.968867),
             deliveryLocation: .init(latitude: 50.059091, longitude: 19.976023),
-            location: "7a, Boston",
+            deliveryLocationName: "7a, Boston",
             deliveryDate: .now + 1,
-            status: .sent
+            status: .sent,
+            driverContact: .init(
+              name: "Saber Ali",
+              phoneNumber: "111-222-333",
+              avatarUrl: .init(string: "https://i.pravatar.cc/55")!
+            )
           )
         ]
       }

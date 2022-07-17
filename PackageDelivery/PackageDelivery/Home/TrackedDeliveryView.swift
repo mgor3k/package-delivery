@@ -17,7 +17,7 @@ struct TrackedDeliveryView: View {
         TitledIcon(
           systemName: "map",
           title: "Location",
-          description: delivery.location
+          description: delivery.deliveryLocationName
         )
         
         TitledIcon(

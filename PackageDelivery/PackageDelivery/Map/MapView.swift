@@ -3,8 +3,6 @@ import MapKit
 import PackageDeliveryUI
 
 struct MapView: View {
-  let mode: DeliveryMapView.Mode
-  
   var body: some View {
     DeliveryMapView(mode: .route(
       start: .init(
@@ -22,9 +20,6 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView(mode: .region(.init(
-      center: .init(latitude: 30, longitude: 30),
-      span: .init(latitudeDelta: 0.5, longitudeDelta: 0.5)
-    )))
+    MapView()
   }
 }

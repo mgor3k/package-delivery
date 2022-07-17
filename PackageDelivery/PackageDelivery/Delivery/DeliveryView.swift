@@ -41,7 +41,11 @@ struct DeliveryView: View {
       )
       .allowsHitTesting(false)
       .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-      .padding()
+      .padding(24)
+      .padding(.horizontal, 12)
+      
+      ContactView(contact: delivery.driverContact)
+        .padding(.horizontal, 32)
     }
     .frame(maxHeight: .infinity, alignment: .top)
     .navigationBarBackButtonHidden(true)

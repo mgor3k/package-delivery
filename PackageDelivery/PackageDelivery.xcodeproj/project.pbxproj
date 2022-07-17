@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9396F86288453F200BC11A8 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F85288453F200BC11A8 /* ContactView.swift */; };
+		B9396F88288454BF00BC11A8 /* ContactAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9396F87288454BF00BC11A8 /* ContactAvatarView.swift */; };
 		B98C2B092880960900635CBB /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B082880960900635CBB /* ServiceItem.swift */; };
 		B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0A288097EC00635CBB /* ServiceList.swift */; };
 		B98C2B0F2880A0D200635CBB /* TabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98C2B0E2880A0D200635CBB /* TabMenu.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9396F85288453F200BC11A8 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		B9396F87288454BF00BC11A8 /* ContactAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAvatarView.swift; sourceTree = "<group>"; };
 		B98C2B082880960900635CBB /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		B98C2B0A288097EC00635CBB /* ServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceList.swift; sourceTree = "<group>"; };
 		B98C2B0E2880A0D200635CBB /* TabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenu.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				B98C2B1C2881A8C300635CBB /* DeliveryView.swift */,
+				B9396F85288453F200BC11A8 /* ContactView.swift */,
+				B9396F87288454BF00BC11A8 /* ContactAvatarView.swift */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				B98C2B202881AAA700635CBB /* MapView.swift in Sources */,
 				B98C2B162880A40900635CBB /* MainView.swift in Sources */,
 				B9E3C0C4288073E600BFECC8 /* TrackedDeliveryView.swift in Sources */,
+				B9396F88288454BF00BC11A8 /* ContactAvatarView.swift in Sources */,
+				B9396F86288453F200BC11A8 /* ContactView.swift in Sources */,
 				B98C2B182880A53000635CBB /* Route.swift in Sources */,
 				B98C2B0B288097EC00635CBB /* ServiceList.swift in Sources */,
 				B9E3C0B6288070DC00BFECC8 /* HomeView.swift in Sources */,
